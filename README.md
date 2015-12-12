@@ -21,7 +21,7 @@
 
 6)Opens a browser in eclipse (Index.jsp) page
 
-->Paste/ type your cypher text and click the Submit button
+->Paste/ type your cypher text and click the Crack Cypher button
 
 
 ## Run the application from the Command Line
