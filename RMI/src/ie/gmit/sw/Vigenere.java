@@ -97,16 +97,21 @@ public class Vigenere { //Blaise de Vigenere is (incorrectly) accredited with in
 		StringBuffer buffer = new StringBuffer();
 		int j = 0;
 		for (int i = 0; i < text.length; i++) {
-			if (text[i] < 'A' || text[i] > 'Z') continue;
-		
-			if (j < key.length) j = 0;
-			
-			if(encrypt){
-				buffer.append(getEncryptedCharacter(key[j], text[i]));
-			}else{
-				buffer.append(getDecryptedCharacter(key[j], text[i]));
-			}
-			j++;
+		if (text[i] < 'A' || text[i] > 'Z') continue;
+		//j = 0;
+
+		if (j >= key.length) j = 0; //or   j = j%key.length if that's your thing
+		if(encrypt){
+
+		buffer.append(getEncryptedCharacter(key[j], text[i]));
+		}else{
+
+		buffer.append(getDecryptedCharacter(key[j], text[i]));
+
+		}
+
+		j++;
+
 		}
 		return buffer.toString();
 	}
@@ -119,7 +124,7 @@ public class Vigenere { //Blaise de Vigenere is (incorrectly) accredited with in
 	
 	public static void main(String[] args) {
 		Vigenere v = new Vigenere("JAVA");
-		String cypherTxt = v.doCypher("Please read the assignment description and schedule carefully and do not be daunted! All of the web client functionality (including periodic polling) is already available in the list of resources below. The resources also include an implementation of the Vigenere cypher and a class capable of enumerating a set of keys. The main body of work to be completed by you is to implement the asynchronous message queues and the RMI service. I also will provide a workshop to get you all started with the assignment.", true);
+		String cypherTxt = v.doCypher("The running key variant of the Vigenère cipher was also considered unbreakable at one time. This version uses as the key a block of text as long as the plaintext. The problem with the running key Vigenère cipher is that the cryptanalyst has statistical information about the key (assuming that the block of text is in a known language) and that information will be reflected in the ciphertext..", true);
 		System.out.println(cypherTxt);
 		
 		String plainTxt = v.doCypher(cypherTxt, false);

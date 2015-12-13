@@ -11,7 +11,7 @@ public class Worker implements Runnable{
 	
 	}
 	
-	public void getList() throws MalformedURLException, RemoteException, NotBoundException
+	public void jobProcessingList() throws MalformedURLException, RemoteException, NotBoundException
 	{
 		while(true){
 			Request request;
@@ -46,7 +46,7 @@ public class Worker implements Runnable{
 	//run the thread
 	public void run() {
 		try {
-			getList();
+			jobProcessingList();
 		} catch (MalformedURLException | RemoteException | NotBoundException e) {
 			
 			e.printStackTrace();

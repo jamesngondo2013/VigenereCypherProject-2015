@@ -57,10 +57,10 @@ public class QuadgramMap {
 			}
 		}
 		br.close();
-		System.out.println(map);
+		System.out.println(map.size());
 	}
 	
 	public static void main(String[] args) throws Exception {
-		new QuadgramMap("./stuff.txt");
+		new QuadgramMap("./WarAndPeace-Tolstoy.txt");
 	}
 }

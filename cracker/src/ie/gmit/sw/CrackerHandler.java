@@ -33,7 +33,6 @@ public class CrackerHandler extends HttpServlet {
 		out.print("</head>");		
 		out.print("<body>");
 		
-		//while(true){
 			
 		out.print("<html><head><title>Distributed Systems Assignment</title>");		
 			out.print("</head>");		
@@ -77,7 +76,7 @@ public class CrackerHandler extends HttpServlet {
 					out.print("<P>PlainText: " + JobQueues.getResult(jobNumber)); //print the finished job
 					
 					//remove job from the queue
-					JobQueues.map.remove(jobNumber);
+					//JobQueues.map.remove(jobNumber);
 				}
 				else{
 					out.print("<H1>Working for Job#: " + taskNumber + "</H1>");
@@ -101,7 +100,6 @@ public class CrackerHandler extends HttpServlet {
 			out.print("<script>");
 			out.print("var wait=setTimeout(\"document.frmCracker.submit();\", 10000);");
 			out.print("</script>");
-		//}
 					
 			/*-----------------------------------------------------------------------     
 			 *  Next Steps: just in case you removed the above....

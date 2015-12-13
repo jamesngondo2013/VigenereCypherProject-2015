@@ -7,7 +7,7 @@
 <table width="600" cellspacing="0" cellpadding="7" border="0">
 	<tr>
 		<td valign="top">
-
+				<legend><h3>James Ngondo</h3></legend>
 			<form bgcolor="white" method="POST" action="doProcess">
 				<fieldset>
 					<legend><h3>Cypher Details</h3></legend>
