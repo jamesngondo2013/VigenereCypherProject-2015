@@ -1,28 +1,37 @@
 # Vigenere Cypher Project-2015
-## How to run the application on Eclipse JEE-Mars
-===============================================
-1) Download zip from the Vigenere Cypher Project from GitHub
+## How to run the Vigenere Cypher Application Remotely
+===================================================
+1) Extract the G00304277 zip folder
 
-2)Unzip and locate the cracker folder
+2) Find the cracker.war file and place it inside Tomcat ->webapps folder
 
-3)Import the folder to your JEE-Eclipse
+3) Run the Tomcat Startup.bat file
 
-->ensure that you have Apache Tomcat v8.0 installed
+4) On the root folder ->C:\G00304277 -> type ->java -cp "./vigenere.jar;lib/*" ie.gmit.sw.Servant
 
-->create a new server in your eclipse JEE
+5) Remote service starts
 
-4)Run the VigenereBreakerImpl.java
+6) Go to the browser, type -> http://localhost:8080/cracker
 
-->This runs and generate all possible keys
+7) Enter the Cypher text
 
-5)Right click on the project(cracker)
+8) Click the Crack Cypher button
 
-->Run As --> Run on Server -->Tomcat v8.0 at localhost --> Finish
+## To import and run the project on Eclipse J2EE
+=================================================== 
+1) Import the cracker.war file to your Eclipse J2EE workspace
 
-6)Opens a browser in eclipse (Index.jsp) page
+2) Import the RMI folder into your Eclipse J2EE workspace
 
-->Paste/ type your cypher text and click the Crack Cypher button
+3) If there are errors on the CrackerHandler java class, please just change the Runtime on eclipse to Tomcat v8.0 
 
+4) Run the Servant class from the RMI project folder
 
-## Run the application from the Command Line
-=================================================
+5) Right click on the cracker project folder -> Run As -> Run on Server -->Tomcat v8.0 at localhost --> Finish
+
+6) This opens a browser in eclipse (Index.jsp) page -> Vigenere Cypher
+
+   ->Paste/ type your cypher text and click the Crack Cypher button
+  
+NOTE: Ensure that you have the WarAndPeace-Tolstoy.txt file in both your root folders
+
